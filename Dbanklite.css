@@ -1,0 +1,143 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --bg-color: hsl(45, 43%, 96%);
+  --second-bg: hsl(0, 0%, 100%);
+  --main-color: hsl(145, 60%, 40%);
+  --color: black;
+}
+body {
+  background-color: var(--bg-color);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  padding: 20px;
+  color: black;
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--second-bg);
+  z-index: 100;
+}
+header h1 {
+  color: black;
+  font-size: 2rem;
+}
+header span {
+  padding: 0;
+  border-radius: 3px;
+  color: rgb(27, 56, 28);
+  font-family: "Franklin Gothic Medium";
+}
+.headernav {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  font-size: 20px;
+  color: black;
+}
+.headernav a {
+  color: black;
+}
+.headernav details {
+  position: relative;
+  align-items: center;
+  font-size: 20px;
+}
+.headernav details:hover,
+.headernav a:hover {
+  font-size: 22px;
+}
+.headernavdropdown {
+  position: absolute;
+  left: 130;
+  top: 30px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgb(159, 170, 159);
+  background-color: var(--second-bg);
+  z-index: 101;
+}
+.headernavdropdown a {
+  display: block;
+  padding-bottom: 1px;
+}
+.headerdiv {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.headerdiv button {
+  padding: 5px 20px;
+  background-color: var(--second-bg);
+  border: 1px solid black;
+  border-radius: 50px;
+}
+.headerdiv button:hover {
+  color: white;
+  background-color: var(--main-color);
+  border: none;
+  font-size: 17px;
+}
+.menubar {
+  display: none;
+  font-size: 1.5rem;
+  color: black;
+  align-items: center;
+}
+.menubar:hover {
+  color: var(--main-color);
+  font-size: 1.7rem;
+}
+@media (max-width: 700px) {
+  .headernav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    width: 300px;
+    height: 100vh;
+    right: 0;
+    align-items: center;
+    justify-content: start;
+    padding: 50px 30px;
+    color: black;
+    overflow-y: auto;
+    background-color: var(--second-bg);
+    z-index: 99;
+  }
+  .headernav.active {
+    display: block;
+  }
+  .headernav details {
+    position: relative;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .headernavdropdown {
+    position: absolute;
+    left: 90px;
+    top: 20px;
+    width: max-content;
+    padding: 1px;
+    background-color: var(--second-bg);
+    z-index: 101;
+    box-shadow: none;
+  }
+  .headernav a {
+    display: block;
+    margin-bottom: 25px;
+  }
+  .menubar {
+    display: block;
+  }
+}
