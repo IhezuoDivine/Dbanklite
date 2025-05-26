@@ -141,3 +141,55 @@ header span {
     display: block;
   }
 }
+.homesection {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  padding: 100px 20px 50px 20px;
+  background-color: var(--bg-color);
+}
+.firsthomepagediv {
+  flex: 2;
+  margin-right: 20px;
+}
+.firsthomepagediv button {
+  margin: 100px 0px 40px 30px;
+  padding: 10px 25px;
+  color: black;
+  border-radius: 50px;
+  background-color: white;
+}
+.firsthomepagediv h1 {
+  word-spacing: -15px;
+  font-size: 3rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.firsthomepagediv p {
+  margin-bottom: 30px;
+}
+.firsthomepagediv a {
+  margin-right: 15px;
+}
+.firsthomepagediv h5 {
+  margin-top: 30px;
+}
+.homesectionimg {
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  width: 200px;
+  border-radius: 10px;
+  flex: 1;
+  margin-top: 30px;
+}
+@media (max-width: 600px) {
+  .homesectionimg {
+    display: none;
+  }
+  .firsthomepagediv h1 {
+    font-size: 3rem;
+  }
+  .firsthomepagediv button{
+    margin-top: 50px;
+  }
+}
