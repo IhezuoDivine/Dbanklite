@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  outline: none;
 }
 :root {
   --bg-color: hsl(45, 43%, 92%);
@@ -77,13 +78,17 @@ header span {
   justify-content: center;
   gap: 15px;
 }
-.headerdiv button {
+.headerdiv button,
+.headerdiv a {
+  color: black;
+  font-size: 16px;
   padding: 5px 20px;
   background-color: var(--second-bg);
   border: 1px solid black;
   border-radius: 50px;
 }
-.headerdiv button:hover {
+.headerdiv button:hover,
+.headerdiv a:hover {
   color: white;
   background-color: var(--main-color);
   border: none;
@@ -151,18 +156,21 @@ header span {
 .firsthomepagediv {
   flex: 2;
   margin-right: 20px;
+  padding-top: 100px;
 }
-.firsthomepagediv button {
-  margin: 100px 0px 40px 30px;
+.personalaccount {
+  margin-left: 30px;
+  font-size: 16px;
   padding: 10px 25px;
   color: black;
   border-radius: 50px;
   background-color: white;
 }
-.firsthomepagediv button:hover {
-  font-size: 1rem;
+.personalaccount:hover {
+  font-size: 1.2rem;
 }
 .firsthomepagediv h1 {
+  margin-top: 40px;
   word-spacing: -15px;
   font-size: 3rem;
   font-family: "Courier New", Courier, monospace;
@@ -192,8 +200,11 @@ header span {
   .firsthomepagediv h1 {
     font-size: 3rem;
   }
-  .firsthomepagediv button {
-    margin-top: 50px;
+  .firsthomepagediv {
+    padding-top: 50px;
+  }
+  .firsthomepagediv a {
+    margin-right: 15px;
   }
 }
 .letsgetyoustarted {
@@ -346,21 +357,135 @@ header span {
   font-weight: bolder;
   font-size: 28px;
 }
-details {
+.faqdetails {
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 8px;
   margin-bottom: 15px;
   padding: 10px;
   background: hsl(0, 45%, 97%);
 }
-
 summary {
   font-weight: bold;
   cursor: pointer;
   font-size: 1rem;
 }
 
-details[open] summary {
+.faqdetails[open] summary {
   color: var(--main-color);
   padding-bottom: 15px;
+}
+.loginsection {
+  display: none;
+  background-color: hsl(0, 0%, 91%);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+.loginhidden {
+  max-width: 600px;
+  margin: 0% auto;
+  padding-top: 200px;
+}
+.loginhidden small a {
+  font-size: 15px;
+  color: hsl(159, 19%, 26%);
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(159, 19%, 36%);
+}
+input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(159, 19%, 26%);
+}
+h2 {
+  color: black;
+}
+small {
+  color: black;
+}
+#errormessage {
+  color: black;
+  padding-top: 20px;
+}
+footer {
+  padding: 15px;
+  background-color: hsl(145, 60%, 30%);
+}
+.footer1stdiv {
+  max-width: 400px;
+}
+.footer1stdiv h1 {
+  color: black;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+.footer1stdiv span {
+  padding: 0;
+  border-radius: 3px;
+  color: rgb(27, 56, 28);
+  font-family: "Franklin Gothic Medium";
+}
+.footer1stdiv p {
+  padding-bottom: 30px;
+}
+.footerflex {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.footerflex address {
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .footerflex {
+    display: block;
+  }
+}
+select {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: hsl(145, 60%, 30%);
+  margin: 15px 0px;
+  outline: none;
+}
+.social-icons {
+  gap: 15px;
+  font-size: 18px;
+}
+.social-icons h1 {
+  font-size: 25px;
+  padding-bottom: 15px;
+}
+.social-icons a {
+  color: hsl(0, 0%, 80%);
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--main-color);
+}
+.Copyright {
+  padding: 15px 10px;
+  border-top: 1px solid black;
 }
