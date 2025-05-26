@@ -159,6 +159,9 @@ header span {
   border-radius: 50px;
   background-color: white;
 }
+.firsthomepagediv button:hover {
+  font-size: 1rem;
+}
 .firsthomepagediv h1 {
   word-spacing: -15px;
   font-size: 3rem;
@@ -189,7 +192,72 @@ header span {
   .firsthomepagediv h1 {
     font-size: 3rem;
   }
-  .firsthomepagediv button{
+  .firsthomepagediv button {
     margin-top: 50px;
+  }
+}
+.letsgetyoustarted {
+  padding: 50px 15px;
+  color: black;
+  background-color: hsl(45, 43%, 86%);
+}
+.letsgetyoustarted h1 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.letsgetyoustartedcontainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  width: 100%;
+  margin-bottom: 35px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.letsgetyoustartedbox {
+  flex: 0 0 400px;
+  border-radius: 10px;
+  padding: 20px 5px;
+  margin-bottom: 20px;
+  background-color: blue;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.letsgetyoustartedbox h2 {
+  color: black;
+  width: 15%;
+  padding: 15px;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: white;
+}
+.letsgetyoustartedbox h1 {
+  padding-left: 40px;
+  font-size: 27px;
+}
+.letsgetyoustartedbox p {
+  padding-left: 40px;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.letsgetyoustarted aside{
+ align-items: center;
+ text-align: center;
+}
+.letsgetyoustarted a{
+  margin-right: 15px;
+}
+@media (max-width:600px){
+  .letsgetyoustartedcontainer{
+    display: block;
+    overflow: hidden;
+  }
+  .letsgetyoustartedbox{
+    margin-bottom: 25px;
   }
 }
