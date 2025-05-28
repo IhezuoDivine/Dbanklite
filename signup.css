@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-color: hsl(0, 29%, 96%);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+article {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 40px;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 8px 15px;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 17px;
+}
+option {
+  width: 100%;
+  padding: 8px 15px;
+  font-weight: bold;
+  margin-top: 0.3rem;
+  background-color: hsl(145, 60%, 40%);
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #2563eb;
+}
+#errormessage2 {
+  padding-top: 20px;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
