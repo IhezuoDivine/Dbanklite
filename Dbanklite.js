@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordsignup = document.getElementById("passwordsignup");
   const confirmPasswordsignup = document.getElementById("confirmPassword");
   const accountType = document.getElementById("accountType");
+  const deposit = document.getElementById("deposit");
   const submit = document.getElementById("submit");
   const errormessage2 = document.getElementById("errormessage2");
 
@@ -108,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = passwordsignup.value.trim();
     const confirmPassword = confirmPasswordsignup.value.trim();
     const account = accountType.value;
+    const depositamount = deposit.value;
 
     if (
       !fullname ||
@@ -115,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
       !phone ||
       !password ||
       !confirmPassword ||
-      !account
+      !account ||
+      !depositamount
     ) {
       showError(errormessage2, "Please fill all fields!");
     } else if (password !== confirmPassword) {
@@ -134,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
         email: email,
         phone: phone,
         account: account,
+        depositamount: depositamount,
       };
 
       localStorage.setItem("userData", JSON.stringify(userData));
@@ -153,6 +157,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const name = userData?.fullname || "User";
   const message = `Hello, ${name}`;
   document.getElementById("welcomeMessage").textContent = message;
+
+  const amount = userData?.depositamount;
+  const message2 = `NGN ${amount}`;
+  document.getElementById("balanceamount").textContent = message2;
 });
 
 document.addEventListener("DOMContentLoaded", () => {
