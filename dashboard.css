@@ -176,6 +176,7 @@ body {
   padding: 15px;
   color: var(--color);
   background-color: var(--second-bg);
+  margin-bottom: 100px;
 }
 .mobiletopupbox form {
   display: grid;

@@ -149,10 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Dashborad
 document.addEventListener("DOMContentLoaded", function () {
-  const name = localStorage.getItem("username");
-
-  const message = name ? `Hello, ${name}` : "Hello, welcome to your dashboard!";
-
+  const userData = JSON.parse(localStorage.getItem("userData"));
+  const name = userData?.fullname || "User";
+  const message = `Hello, ${name}`;
   document.getElementById("welcomeMessage").textContent = message;
 });
 
