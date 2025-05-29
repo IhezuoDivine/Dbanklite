@@ -54,6 +54,9 @@ header span {
   align-items: center;
   font-size: 20px;
 }
+summary::-webkit-details-marker {
+  display: none;
+}
 .headernav details:hover,
 .headernav a:hover {
   font-size: 22px;
@@ -466,6 +469,7 @@ select {
   background-color: hsl(145, 60%, 30%);
   margin: 15px 0px;
   outline: none;
+  color: black;
 }
 .social-icons {
   gap: 15px;

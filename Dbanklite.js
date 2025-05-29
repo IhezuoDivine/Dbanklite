@@ -1,3 +1,4 @@
+// login
 document.addEventListener("DOMContentLoaded", function () {
   const headernav = document.getElementById("headernav");
   const menubarbtn = document.getElementById("menubar");
@@ -8,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     headernav.classList.toggle("active");
   });
 
-  //for login
   const main = document.getElementById("main");
   const loginsection = document.getElementById("loginsection");
   const Loginbtn = document.getElementById("Loginbtn");
@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Signup
 document.addEventListener("DOMContentLoaded", function () {
   const fullnamesignup = document.getElementById("fullname");
   const emailsignup = document.getElementById("emailsignup");
@@ -125,11 +127,95 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (!isValidPassword(password)) {
       showError(errormessage2, "Password must be at least 8 characters long!");
     } else {
+      // localStorage.setItem("username", fullname);
+      // On successful signup, save all details in localStorage as JSON string
+      const userData = {
+        fullname: fullname,
+        email: email,
+        phone: phone,
+        account: account,
+      };
+
+      localStorage.setItem("userData", JSON.stringify(userData));
+
       showError(errormessage2, "Signup Successful!", "green");
 
       setTimeout(() => {
         window.location.href = "dashboard.html";
       }, 1000);
     }
+  });
+});
+
+// Dashborad
+document.addEventListener("DOMContentLoaded", function () {
+  const name = localStorage.getItem("username");
+
+  const message = name ? `Hello, ${name}` : "Hello, welcome to your dashboard!";
+
+  document.getElementById("welcomeMessage").textContent = message;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const userDataStr = localStorage.getItem("userData");
+  if (!userDataStr) return; // no saved data
+
+  const userData = JSON.parse(userDataStr);
+
+  if (userData.fullname)
+    document.getElementById("profileFullname").textContent = userData.fullname;
+
+  if (userData.email)
+    document.getElementById("profileEmail").textContent = userData.email;
+
+  if (userData.phone)
+    document.getElementById("profilePhone").textContent = userData.phone;
+
+  if (userData.account)
+    document.getElementById("profileAccount").textContent = userData.account;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const myprofile = document.getElementById("myprofile");
+  const returnhome = document.getElementById("returnhome");
+  const gotomyprofile = document.getElementById("gotomyprofile");
+  const mainsection = document.getElementById("mainsection");
+  const outofmorebox = document.getElementById("outofmorebox");
+  const morebtn = document.getElementById("morebtn");
+  const morebox = document.getElementById("morebox");
+
+  // display morebox and hide others
+  morebtn.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    myprofile.style.display = "none";
+    mainsection.style.display = "none";
+    morebox.style.display = "block";
+  });
+
+  // display profile and hide others
+  gotomyprofile.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    mainsection.style.display = "none";
+    myprofile.style.display = "block";
+    morebox.style.display = "none";
+  });
+
+  //return my profile to home
+  returnhome.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    mainsection.style.display = "block";
+    myprofile.style.display = "none";
+    morebox.style.display = "none";
+  });
+
+  outofmorebox.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    mainsection.style.display = "block";
+    myprofile.style.display = "none";
+    morebox.style.display = "none";
   });
 });
