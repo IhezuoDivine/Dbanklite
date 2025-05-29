@@ -173,10 +173,10 @@ body {
 }
 .mobiletopupbox {
   border-radius: 10px;
-  padding: 15px;
+  padding: 25px 15px;
   color: var(--color);
   background-color: var(--second-bg);
-  margin-bottom: 100px;
+  margin-bottom: 160px;
 }
 .mobiletopupbox form {
   display: grid;
