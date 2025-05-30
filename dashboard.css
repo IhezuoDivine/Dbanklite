@@ -32,7 +32,7 @@ body {
 }
 .myprofile {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   display: none;
   overflow-y: auto;
   overflow-x: hidden;
@@ -41,13 +41,6 @@ body {
   background-color: hsl(45, 10%, 96%);
   padding: 15px;
   color: var(--color);
-}
-@media (min-width: 1300px) {
-  .myprofile {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-  }
 }
 .myprofilebox {
   display: flex;
@@ -213,7 +206,7 @@ body {
   background-color: var(--main-color);
 }
 footer {
-  display: none;
+  display: block;
   font-size: 16px;
   position: fixed;
   bottom: 0;
@@ -226,11 +219,6 @@ footer {
   max-width: 600px;
   z-index: 100;
 }
-@media (max-width: 600px) {
-  footer {
-    display: block;
-  }
-}
 footer div {
   display: flex;
   justify-content: space-between;
@@ -242,6 +230,7 @@ footer a {
   color: var(--main-color);
   font-size: 17px;
   font-weight: bolder;
+  padding-bottom: 10px;
 }
 footer a:hover {
   color: hsl(145, 60%, 50%);
@@ -252,21 +241,11 @@ footer a span {
 .morebox {
   display: none;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   overflow-y: auto;
   overflow-x: hidden;
   top: 0;
   height: 100vh;
-}
-@media (min-width: 1000px) {
-  .morebox {
-    display: block;
-    height: 100vh;
-    background-color: var(--second-bg);
-    width: 100%;
-    max-width: 400px;
-    padding: 15px;
-  }
 }
 .morebox div {
   display: flex;
